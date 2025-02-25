@@ -220,7 +220,7 @@ server.get("/api/past-orders", async function getPastOrders(req, res) {
     );
     res.send(pastOrders);
   } catch (error) {
-    req.log.error(error);
+    req.log.error(error, "here it is");
     res.status(500).send({ error: "Failed to fetch past orders" });
   }
 });
